@@ -1,0 +1,424 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Trang chủ</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Times New Roman', Times, serif; 
+        }
+        .backgroundPage{
+            width: auto;
+            height: auto;
+            background-image: url("../images/BACKGROUND_PAGE/anh-nen-bang-gia-mua-dong_01.jpg");
+            background-size: cover;
+        }
+        .header {
+            width: auto;
+            height: auto;
+            background-color: rgb(74, 144, 226);
+        }
+
+        .header-top {
+            width: auto;
+            height: auto;
+            background-color: rgb(236, 0, 140);
+            text-align: center;
+        }
+
+        .header-bottom {
+            width: 960px;
+            height: 50px;
+            background-color: rgb(74, 144, 226);
+            position: relative;
+            text-align: left;
+        }
+        .hbt-left{
+            width: 35%;
+            height: auto;
+            margin-top: 5px;
+            position:absolute;
+            left: 0;
+            top: 0;
+        }
+        .hbt-right{
+            width: 65%;
+            height: auto;
+            margin-top: 8px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .hbt-right li{
+            display: inline;
+            list-style-type: none;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid rgb(20, 100, 194);
+        }
+        .hbt-right a:link{
+            text-decoration: none;
+            font-size: 20px;
+            color: #ffffff;
+        }
+        .hbt-right a{
+            color:  #ffffff;
+        }
+        .hbt-right a:hover{
+            text-decoration: none;
+            color:#ffd800;
+        }
+        .hbt-right li > ul{
+            display: none;
+        }
+        .hbt-right li:hover ul{
+            display:block;
+            position: absolute;
+            left: 320px;
+            margin: 0;
+        }
+        .hbt-right li:hover ul li a:link{
+            display: block;
+            background-color: #ffd800;
+        }
+        .banner{
+            margin-top: 5px;
+            width: 960px;
+            height: auto;   
+        }
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+        .container-fluid {
+            margin-top: 5px;
+            width: 960px;
+            height: auto;
+            background-color: #ffffff;
+        }
+        .c-menu{
+            padding-bottom: 10px;
+            border-bottom: double;
+        }
+        .c-menu a {
+           padding: 5px;
+           
+           border: 1px solid rgb(0, 0, 0);
+           background-color: #ffffff;
+       }
+        .c-menu a:hover{
+            border: 1px solid rgb(74, 144, 226);
+        }
+        .col-xl-3{
+            padding: 0;
+            border: 1px solid #CCC; 
+	        height: auto; /** Chiều cao tự động **/ 
+	        margin: 0px auto; /** Cách trên dưới 10px và nằm giữa **/ 
+	        overflow: hidden; /** DÒNG BẮT BUỘC CÓ **/ 
+	        position: relative; 
+            width: auto; /** Chiều rộng vùng chứa **/
+        }
+        .col-xl-3 a{
+            text-decoration: none;
+            color: #000000;
+        }
+        .col-xl-3 img{
+            width: 235px;
+            margin: 10px 0 10px 0;
+        }
+        #item-0{
+        }
+        #item-01{
+           background-color: #ff8989; 
+           padding: 3px; 
+           border-radius: 8px 0 0 8px; 
+           margin-left: 2px
+        }
+        #item-02{
+           background-color: #ffdc20; 
+           padding: 3px; 
+           border-radius: 0 8px 8px 0; 
+           margin-left: 2px
+        }
+        #item-1{
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        #item-2{
+            margin-left: 20px;
+        }
+        
+        .col-xl-3 img { 
+	        width: 100%; /** Hình ảnh rộng 100% so với vùng chứa **/ 
+	        transition: all 1s; /** Tạo độ mượt **/ } 
+	
+        .col-xl-3:hover img { 
+	        -webkit-transform: scale(1.2); 
+            transform: scale(1.2); 
+        }
+        .footer{
+            width: 960px;
+            height: auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: left;
+            padding: 10px;
+            background-color: #ffffff;
+            
+        }
+        .footer span{
+            color: #0094ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="backgroundPage">
+        <div class="header">
+            <div class="header-top">
+                <img src="../images/HEADER_PAGE/TOP-BAR02-1200x44-2.gif" style="width: 960px" />
+            </div>
+            <div class="header-bottom">
+                <div class="hbt-left">
+                    <a href="../html/Home_Page.html">
+                        <img src="../images/HEADER_PAGE/unnamed.png" style="height: 40px; margin-right: 20px" ; />
+                    </a>
+                    <input type="text" placeholder="Bạn đang tìm gì?" style="width: 250px ; padding: 5px ;border-radius: 5px; border: 1px solid #ffffff" />
+                </div>
+                <div class="hbt-right">
+                    <ul>
+                        <li><a href="#">Giỏ hàng</a></li>
+                        <li><a href="#">Lịch sử mua hàng</a></li>
+                        <li><a href="#">Tư vấn mua hàng</a></li>
+                        <li><a href="#">Khuyến mãi</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                    <li data-target="#demo" data-slide-to="3"></li>
+                    <li data-target="#demo" data-slide-to="4"></li>
+                    <li data-target="#demo" data-slide-to="5"></li>
+                    <li data-target="#demo" data-slide-to="6"></li>
+                    <li data-target="#demo" data-slide-to="7"></li>
+                    <li data-target="#demo" data-slide-to="8"></li>
+                </ul>
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="#">
+                            <img src="../images/BANNER_PAGE/banner1.png" />
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="">
+                            <img src="../images/BANNER_PAGE/banner2.png" />
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="">
+                            <img src="../images/BANNER_PAGE/banner3.png" />
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="../html/DAIKIN_Page.html">
+                            <img src="../images/BANNER_PAGE/banner_DAIKIN.png" />
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="../html/LG_Page.html">
+                            <img src="../images/BANNER_PAGE/banner_LG.png" />
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="../html/Panasonic_Page.html">
+                            <img src="../images/BANNER_PAGE/banner_PANASONIC.png" />
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="../html/SAMSUNG_Page.html">
+                            <img src="../images/BANNER_PAGE/banner_SAMSUNG.png" />
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="../html/SHARP_Page.html">
+                            <img src="../images/BANNER_PAGE/banner_SHARP.png" />
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="../html/TOSHIBA_Page.html">
+                            <img src="../images/BANNER_PAGE/banner_TOSHIBA.png" />
+                        </a>
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <label for="" style="font-family:'Times New Roman', Times, serif; font-size: 120%;"><b>CHỌN THƯƠNG HIỆU:</b></label>
+            <div class="c-menu">
+                <div class="row">
+                        <a href="../html/DAIKIN_Page.html">
+                            <img src="../images/LOGO_PRODUCTS/DAIKIN.png" height="30" />
+                        </a>
+                        <a href="../html/LG_Page.html">
+                            <img src="../images/LOGO_PRODUCTS/LG.png" height="30" />
+                        </a>
+                        <a href="../html/Panasonic_Page.html">
+                            <img src="../images/LOGO_PRODUCTS/PANASONIC.png" height="30"/>
+                        </a>
+                        <a href="../html/SAMSUNG_Page.html">
+                            <img src="../images/LOGO_PRODUCTS/SAMSUNG.jpg" height="30"/>
+                        </a>
+                        <a href="../html/SHARP_Page.html">
+                            <img src="../images/LOGO_PRODUCTS/SHARP.png" height="30"/>
+                        </a>
+                        <a href="../html/TOSHIBA_Page.html">
+                            <img src="../images/LOGO_PRODUCTS/TOSHIBA.png" height="30"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-xl-3">
+                        <a href="../html/Panasonic_1.html">
+                            <h6 id="item-0"><small id="item-01">Bán chạy</small><small id="item-02">Trả góp 0%</small></h6>
+                            <img src="../images/PICTURES_US_PRODUCTS/PANASONIC/PRODUCT_1/panasonic-cu-cs-pu9wkh-8m-1-550x160.jpg" />
+                            <h6 id="item-1">Máy lạnh Panasonic Inverter 1 HP CU/CS-PU9WKH-8M</h6>
+                            <h6 id="item-2"><strong>10.090.000đ</strong></h6>
+                            <h6 id="item-2"><strong><del>10.590.000đ</del><span style="color: #ff0000"> -4%</span></strong></h6>
+                        </a>
+                    </div>
+                    <div class="col-xl-3">
+                        <a href="../html/Panasonic_2.html">
+                            <h6 id="item-0"><small id="item-01">Bán chạy</small><small id="item-02">Trả góp 0%</small></h6>
+                            <img src="../images/PICTURES_US_PRODUCTS/PANASONIC/PRODUCT_2/panasonic-cu-cs-xu9ukh-8-10-550x160.jpg" />
+                            <h6 id="item-1">Máy lạnh Panasonic Inverter 1 HP CU/CS-XU9UKH-8</h6>
+                            <h6 id="item-2"><strong>10.990.000đ</strong></h6>
+                            <h6 id="item-2"><strong><del>12.490.000đ</del><span style="color: #ff0000"> -4%</span></strong></h6>
+                        </a>
+                    </div>
+                    <div class="col-xl-3">
+                        <a href="../html/Page_Samsung_IVT_AR10TYHY.html">
+                            <h6 id="item-0"><small id="item-01">Bán chạy</small><small id="item-02">Trả góp 0%</small></h6>
+                            <img src="../images/PICTURES_US_PRODUCTS/SAMSUNG/samsung-ar10tyhycwknsv-550x160.jpg" />
+                            <h6 id="item-1">Máy lạnh Samsung Inverter 1 HP AR10TYHYCWKNSV</h6>
+                            <h6 id="item-2"><strong>8.800.000đ</strong></h6>
+                            <h6 id="item-2"><strong><del>11.000.000đ</del><span style="color: #ff0000"> -16%</span></strong></h6>
+                        </a>
+                    </div>
+                    <div class="col-xl-3">
+                        <a href="../html/Page_Samsung_IVT_AR13RYF.html">
+                            <h6 id="item-0"><small id="item-01">Bán chạy</small><small id="item-02">Trả góp 0%</small></h6>
+                            <img src="../images/PICTURES_US_PRODUCTS/SAMSUNG/may-lanh-samsung-ar13ryftaurnsv-8-550x160.jpg" />
+                            <h6 id="item-1">Máy lạnh Samsung Inverter 1.5 HP AR13RYFTAURNSV</h6>
+                            <h6 id="item-2"><strong>9.900.000đ</strong></h6>
+                            <h6 id="item-2"><strong><del>10.500.000đ</del><span style="color: #ff0000"> -16%</span></strong></h6>
+                        </a>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-xl-3">
+                        <a href="../html/Page_Toshiba _IVT_H10D2KCVG.html">
+                            <h6 id="item-0"><small id="item-01">Bán chạy</small><small id="item-02">Trả góp 0%</small></h6>
+                            <img src="../images/PICTURES_US_PRODUCTS/TOSHIBA/toshiba-ras-h10d2kcvg-v-2-550x160.jpg" />
+                            <h6 id="item-1"> Máy lạnh Toshiba Inverter 1 HP RAS-H10D2KCVG-V </h6>
+                            <h6 id="item-2"><strong>9.140.000đ</strong></h6>
+                            <h6 id="item-2"><strong><del>9.990.000đ</del><span style="color: #ff0000"> -8%</span></strong></h6>
+                        </a>
+                    </div>
+                    <div class="col-xl-3">
+                        <a href="../html/Page_Toshiba_IVT_H18C2KGVG.html">
+                            <h6 id="item-0"><small id="item-01">Bán chạy</small><small id="item-02">Trả góp 0%</small></h6>
+                            <img src="../images/PICTURES_US_PRODUCTS/TOSHIBA/toshiba-ras-h18c2kcvg-v-2-550x160.jpg" />
+                            <h6 id="item-1">Máy lạnh Toshiba Inverter 1 HP RAS-H10D2KCVG-V</h6>
+                            <h6 id="item-2"><strong>15.840.000đ</strong></h6>
+                            <h6 id="item-2"><strong><del>16.690.000đ</del><span style="color: #ff0000"> -5%</span></strong></h6>
+                        </a>
+                    </div>
+                    <div class="col-xl-3">
+                        <a href="../html/Daikin Inverter 1HP FTKA .html">
+                            <h6 id="item-0"><small id="item-01">Bán chạy</small><small id="item-02">Trả góp 0%</small></h6>
+                            <img src="../images/PICTURES_US_PRODUCTS/DAIKIN/1hpftka25vmvmv-550x160.jpg" />
+                            <h6 id="item-1">Máy lạnh Daikin Inventer 1HP FTKA25VMVMV </h6>
+                            <h6 id="item-2"><strong>9.740.000đ</strong></h6>
+                            <h6 id="item-2"><strong><del>10.590.000đ</del><span style="color: #ff0000"> -8%</span></strong></h6>
+                        </a>
+                    </div>
+                    <div class="col-xl-3">
+                        <a href="../html/Daikin Iverter 1HP ATKC.html">
+                            <h6 id="item-0"><small id="item-01">Bán chạy</small><small id="item-02">Trả góp 0%</small></h6>
+                            <img src="../images/PICTURES_US_PRODUCTS/DAIKIN/daikin-atkc25uavmv-7-550x160.jpg" />
+                            <h6 id="item-1">Máy lạnh Daikin Inverter 1 HP ATKC25UAVMV</h6>
+                            <h6 id="item-2"><strong>11.140.000đ</strong></h6>
+                            <h6 id="item-2"><strong><del>10.990.000đ</del><span style="color: #ff0000"> -7%</span></strong></h6>
+                        </a>
+                    </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-xl-3">
+                            <a href="../html/Máy lạnh Sharp Inverter 1 HP AH-X9XEW.html">
+                                <h6 id="item-0"><small id="item-01">Bán chạy</small><small id="item-02">Trả góp 0%</small></h6>
+                                <img src="../images/PICTURES_US_PRODUCTS/SHARP/sharp-ah-x9xew-1-550x160.jpg" />
+                                <h6 id="item-1">Máy lạnh Sharp Inverter 1 HP AH-X9XEW</h6>
+                                <h6 id="item-2"><strong>8.140.000đ</strong></h6>
+                                <h6 id="item-2"><strong><del>8.990.000đ</del><span style="color: #ff0000"> -9%</span></strong></h6>
+                            </a>
+                        </div>
+                        <div class="col-xl-3">
+                            <a href="../html/Máy lạnh Sharp Inverter 1.5 HP AH-X12XEW .html">
+                                <h6 id="item-0"><small id="item-01">Bán chạy</small><small id="item-02">Trả góp 0%</small></h6>
+                                <img src="../images/PICTURES_US_PRODUCTS/SHARP/sharp-ah-x12xew-1-550x160.jpg" />
+                                <h6 id="item-1">Máy lạnh Sharp Inverter 1.5 HP AH-X12XEW</h6>
+                                <h6 id="item-2"><strong>10.140.000đ</strong></h6>
+                                <h6 id="item-2"><strong><del>10.990.000đ</del><span style="color: #ff0000"> -7%</span></strong></h6>
+                            </a>
+                        </div>
+                        <div class="col-xl-3">
+                            <a href="../html/LG Inverter 1 HP V10ENH1.html">
+                                <h6 id="item-0"><small id="item-01">Bán chạy</small><small id="item-02">Trả góp 0%</small></h6>
+                                <img src="../images/PICTURES_US_PRODUCTS/LG/lg-v10enh1-13-550x160.jpg" />
+                                <h6 id="item-1">Máy lạnh LG Inverter 1 HP V10ENH1 </h6>
+                                <h6 id="item-2"><strong>8.540.000đ</strong></h6>
+                                <h6 id="item-2"><strong><del>9.390.000đ</del><span style="color: #ff0000"> -9%</span></strong></h6>
+                            </a>
+                        </div>
+                        <div class="col-xl-3">
+                            <a href="../html/LG Inverter 1.5 HP V13ENH1.html">
+                                <h6 id="item-0"><small id="item-01">Bán chạy</small><small id="item-02">Trả góp 0%</small></h6>
+                                <img src="../images/PICTURES_US_PRODUCTS/LG/lg-v13enh1-1-550x160.jpg" />
+                                <h6 id="item-1">Máy lạnh LG Inverter 1.5 HP V13ENH1</h6>
+                                <h6 id="item-2"><strong>10.040.000đ</strong></h6>
+                                <h6 id="item-2"><strong><del>10.890.000đ</del><span style="color: #ff0000"> -7%</span></strong></h6>
+                            </a>
+                        </div>
+                    </div>
+            </div>
+            <div class="footer">
+                <p>&copy; 2021. <span> Website bán Máy lạnh trực tuyến</span> design by Nhóm 4. Lớp: DHKTPM15B. Môn học: HỆ THỐNG VÀ CÔNG NGHỆ WEB.</p>
+                <p> Chịu trách nhiệm nội dung: Nguyễn Trọng Quý, Bùi Công Giang & Lê Huy Hoàng.</p>
+            </div>
+      </div> 
+</body>
+</html>
